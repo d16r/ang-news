@@ -5,8 +5,10 @@ app.controller('PostsCtrl', function($scope, Post) {
     $scope.posts = [];
 
     $scope.submitPost = function() {
-        $scope.posts.push($scope.post);
-        $scope.post = { url: 'http://', title: ''};
+        Post.save($scope.post, function(ref){
+            $scope.posts[ref.name] = $scope.post;
+            $scope.post = { url: 'http://', title: ''};
+        });
     };
 
     $scope.deletePost = function(index) {
