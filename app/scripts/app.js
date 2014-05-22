@@ -3,7 +3,8 @@ var app = angular.module('angNewsApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ]);
 
 
