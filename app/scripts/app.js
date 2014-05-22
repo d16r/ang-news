@@ -15,3 +15,5 @@ app.config(function ($routeProvider) {
         controller: 'PostsCtrl'
       });
   });
+
+app.constant('FIREBASE_URL', 'https://sweltering-fire-5020.firebaseio.com/')
