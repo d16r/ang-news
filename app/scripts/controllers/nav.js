@@ -8,8 +8,8 @@ app.controller('NavCtrl', function($scope, $location, Post, Auth) {
     }
 
     $scope.submitPost = function() {
-        Post.create($scope.post).then(function(ref) {
-            $location.path('/posts/' + ref.name());
+        Post.create($scope.post).then(function(postId) {
+            $location.path('/posts/' + postId);
             $scope.post = {url: 'http://', title: ''};
         });
     };
