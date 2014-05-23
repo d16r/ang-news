@@ -8,5 +8,5 @@ app.controller('PostsCtrl', function($scope, $location, Post) {
 
     $scope.deletePost = function(postId) {
         Post.delete(postId);
-    }
+    };
 });
